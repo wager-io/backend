@@ -86,10 +86,15 @@ app.get("/", (req, res)=>{
   res.send("Welcome to Wager server")
 })
 
+const dbHost = "highscoreteh"
+const dbPass = "AoUXugCyZEfpBmMx"
+const dbCompany = "wager"
+
+
 mongoose.set('strictQuery', false);
 // connect database
 // const dbUri = `mongodb://localhost:27017/wager`
-const dbUri = `mongodb+srv://highscoreteh:eNiIQbm4ZMSor8VL@cluster0.xmpkpjc.mongodb.net/wager?retryWrites=true&w=majority`
+const dbUri = `mongodb+srv://${dbHost}:${dbPass}@cluster0.xmpkpjc.mongodb.net/${dbCompany}?retryWrites=true&w=majority`
 mongoose.connect(dbUri, { useNewUrlParser: true,  useUnifiedTopology: true })
     .then((result)=>  console.log('Database connected'))
     .catch((err)=> console.log(err))
