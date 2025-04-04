@@ -1002,7 +1002,7 @@ function generateHashes(seed, numberOfHashes) {
     createHash();
   });
 }
-// generateHashes(input, numberOfTimesToHash);
+generateHashes(input, numberOfTimesToHash);
 
 const resetCrashDB = async () => {
   // await Promise.all([
